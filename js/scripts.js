@@ -50,36 +50,36 @@ $('iframe[src*="youtube"]').wrap('<div class="responsiveIframe"/>');
 		//$("body").css({'overflow':'auto','height':'auto'});
 	//});
 
-	var hoverTimeout;
-    $('.nav .drop_trigger').hover(function() {
+    var hoverTimeout;
+    $('nav .trigger').hover(function() {
         clearTimeout(hoverTimeout);
-        $(this).addClass('open').find('.drop_menu').attr('aria-hidden', 'true').attr('aria-expanded', 'false');
-        $('.drop_trigger').not(this).removeClass("open");
+        $(this).addClass('open').find('.drop').attr('aria-hidden', 'true').attr('aria-expanded', 'false');
+        $('.trigger').not(this).removeClass("open");
     }, function() {
         var $self=$(this);
         hoverTimeout = setTimeout(function() {
-            $self.removeClass('open').find('.drop_menu').attr('aria-hidden', 'true').attr('aria-expanded', 'false');
+            $self.removeClass('open').find('.drop').attr('aria-hidden', 'true').attr('aria-expanded', 'false');
         }, 250);
     });
 
-    $('.nav .drop_trigger > a').focusin(function() {
+    $('nav .trigger > a').focusin(function() {
         var parent = $(this).parent();
-        parent.addClass('open').find('.drop_menu').attr('aria-hidden','false').attr('aria-expanded', 'true');
-        $('.drop_trigger').not(parent).removeClass("open");
+        parent.addClass('open').find('.drop').attr('aria-hidden','false').attr('aria-expanded', 'true');
+        $('.trigger').not(parent).removeClass("open");
     });
 
-    $('.nav .drop_menu a:last,.nav .drop_menu input').focusout(function() {
-        var parent = $(this).parents().find('.drop_trigger');
-        parent.removeClass('open').find('.drop_menu').attr('aria-hidden','true').attr('aria-expanded', 'false');
+    $('nav .drop a:last,.nav .drop input').focusout(function() {
+        var parent = $(this).parents().find('.trigger');
+        parent.removeClass('open').find('.drop').attr('aria-hidden','true').attr('aria-expanded', 'false');
     });
 
-    $('.mobile_nav > .drop_trigger > *').click(function(){
-        var parent = $(this).closest('.drop_trigger');
-        var icon = parent.find('.drop_trigger_icon');
+    $('.mobile_nav > .trigger > *').click(function(){
+        var parent = $(this).closest('.trigger');
+        var icon = parent.find('.trigger_icon');
         var aonclick = parent.find('a:first').is('[onclick]');
         if($(this).is('a')){
             if(aonclick === true){
-            	$('.drop_trigger').not(parent).removeClass("open").find('i').attr( "class", "fal fa-plus");
+            	$('.trigger').not(parent).removeClass("open").find('i').attr( "class", "fal fa-plus");
             	parent.toggleClass("open");
                 if(parent.hasClass('open')){
                     $(icon).find('i').attr( "class", "fal fa-minus");
@@ -88,26 +88,26 @@ $('iframe[src*="youtube"]').wrap('<div class="responsiveIframe"/>');
                 }
             }
         }
-        if($(this).hasClass('drop_trigger_icon')){
+        if($(this).hasClass('trigger_icon')){
             parent.toggleClass("open");
-    		$('.mobile_nav > .drop_trigger').not(parent).removeClass("open").find('i').attr( "class", "fal fa-plus");
+    		$('.mobile_nav > .trigger').not(parent).removeClass("open").find('i').attr( "class", "fal fa-plus");
             if(parent.hasClass('open')){
                 $(icon).find('i').attr( "class", "fal fa-minus");
-                $('.open > .drop_menu').attr('aria-hidden','false');
+                $('.open > .drop').attr('aria-hidden','false');
             }else{
                 $(icon).find('i').attr( "class", "fal fa-plus");
-                $('.drop_menu').attr('aria-hidden','true');
+                $('.drop').attr('aria-hidden','true');
             }
         }
     });
 
-	$('button.mobile_closer').click(function(){
-	    $('.mobile_nav').fadeOut(100).attr('aria-hidden', 'true').attr('aria-expanded', 'false');
-		$('body,html').css({'overflow':'auto','height':'auto'});
-		$('.headerWrap').css({'position':'relative','z-index':'0'});
-		$('.navicon').find('i').attr( "class", "fal fa-bars");
-		$('button.navicon').attr( "aria-label", "Open Mobile Menu");
-	});
+    $('button.mobile_closer').click(function(){
+        $('.mobile_nav').fadeOut(100).attr('aria-hidden', 'true').attr('aria-expanded', 'false');
+    	$('body,html').css({'overflow':'auto','height':'auto'});
+    	$('.headerWrap').css({'position':'relative','z-index':'0'});
+    	$('.navicon').find('i').attr( "class", "fal fa-bars");
+    	$('button.navicon').attr( "aria-label", "Open Mobile Menu");
+    });
 
 //Slideshow
 $('.slideshow .container').slick({
