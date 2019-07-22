@@ -110,10 +110,10 @@ $('iframe[src*="youtube"]').wrap('<div class="responsiveIframe"/>');
 	});
 
 //Slideshow
-$('.slideshow').slick({
+$('.slideshow .container').slick({
   autoplay: true,
   autoplaySpeed: 5000,
-  dots: true,
+  dots: false,
   infinite: true,
   fade: false,
   speed: 300,
