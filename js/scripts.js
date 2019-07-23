@@ -44,12 +44,6 @@ $('iframe[src*="youtube"]').wrap('<div class="responsiveIframe"/>');
 	    }
 	});
 
-	//$('.mobile_nav .exit').click(function() {
-		//$('.mobile_nav').hide().attr('aria-hidden', 'true');
-		//$('.mobile_screen').attr('aria-hidden','true').hide();
-		//$("body").css({'overflow':'auto','height':'auto'});
-	//});
-
     var hoverTimeout;
     $('.nav .trigger').hover(function() {
         clearTimeout(hoverTimeout);
