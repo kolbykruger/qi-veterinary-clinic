@@ -29,16 +29,16 @@ $('iframe[src*="youtube"]').wrap('<div class="responsiveIframe"/>');
     });
 
 	$('.navicon').click(function() {
-	    if($('.mobile_nav').is(':visible')){
-    	    $('.mobile_nav').fadeOut(100).attr('aria-hidden', 'true').attr('aria-expanded', 'false');
+	    if($('.mobile-nav').is(':visible')){
+    	    $('.mobile-nav').fadeOut(100).attr('aria-hidden', 'true').attr('aria-expanded', 'false');
     		$('body,html').css({'overflow':'auto','height':'auto'});
-    		$('.headerWrap').css({'position':'relative','z-index':'0'});
+    		$('.header').css({'position':'relative','z-index':'0'});
     		$('.navicon').find('i').attr( "class", "fal fa-bars");
     		$('button.navicon').attr( "aria-label", "Open Mobile Menu");
 	    }else{
-	        $('.mobile_nav').fadeIn(400).attr('aria-hidden', 'false').attr('aria-expanded', 'true');
+	        $('.mobile-nav').fadeIn(400).attr('aria-hidden', 'false').attr('aria-expanded', 'true');
 	        $('body,html').css({'overflow':'hidden','height':'0'});
-	        $('.headerWrap').css({'position':'fixed','z-index':'9999'});
+	        $('.header').css({'position':'fixed','z-index':'9999'});
 	        $('.navicon').find('i').attr( "class", "fal fa-times");
 	        $('button.navicon').attr( "aria-label", "Close Mobile Menu");
 	    }
@@ -51,7 +51,7 @@ $('iframe[src*="youtube"]').wrap('<div class="responsiveIframe"/>');
 	//});
 
     var hoverTimeout;
-    $('nav .trigger').hover(function() {
+    $('.nav .trigger').hover(function() {
         clearTimeout(hoverTimeout);
         $(this).addClass('open').find('.drop').attr('aria-hidden', 'true').attr('aria-expanded', 'false');
         $('.trigger').not(this).removeClass("open");
@@ -62,20 +62,20 @@ $('iframe[src*="youtube"]').wrap('<div class="responsiveIframe"/>');
         }, 250);
     });
 
-    $('nav .trigger > a').focusin(function() {
+    $('.nav .trigger > a').focusin(function() {
         var parent = $(this).parent();
         parent.addClass('open').find('.drop').attr('aria-hidden','false').attr('aria-expanded', 'true');
         $('.trigger').not(parent).removeClass("open");
     });
 
-    $('nav .drop a:last,.nav .drop input').focusout(function() {
+    $('.nav .drop a:last,.nav .drop input').focusout(function() {
         var parent = $(this).parents().find('.trigger');
         parent.removeClass('open').find('.drop').attr('aria-hidden','true').attr('aria-expanded', 'false');
     });
 
-    $('.mobile_nav > .trigger > *').click(function(){
+    $('.mobile-nav .trigger > *').click(function(){
         var parent = $(this).closest('.trigger');
-        var icon = parent.find('.trigger_icon');
+        var icon = parent.find('.trigger-icon');
         var aonclick = parent.find('a:first').is('[onclick]');
         if($(this).is('a')){
             if(aonclick === true){
@@ -88,9 +88,9 @@ $('iframe[src*="youtube"]').wrap('<div class="responsiveIframe"/>');
                 }
             }
         }
-        if($(this).hasClass('trigger_icon')){
+        if($(this).hasClass('trigger-icon')){
             parent.toggleClass("open");
-    		$('.mobile_nav > .trigger').not(parent).removeClass("open").find('i').attr( "class", "fal fa-plus");
+    		$('.mobile-nav > .trigger').not(parent).removeClass("open").find('i').attr( "class", "fal fa-plus");
             if(parent.hasClass('open')){
                 $(icon).find('i').attr( "class", "fal fa-minus");
                 $('.open > .drop').attr('aria-hidden','false');
@@ -101,12 +101,12 @@ $('iframe[src*="youtube"]').wrap('<div class="responsiveIframe"/>');
         }
     });
 
-    $('button.mobile_closer').click(function(){
-        $('.mobile_nav').fadeOut(100).attr('aria-hidden', 'true').attr('aria-expanded', 'false');
+    $('button.mobile-closer').click(function(){
+        $('.mobile-nav').fadeOut(100).attr('aria-hidden', 'true').attr('aria-expanded', 'false');
     	$('body,html').css({'overflow':'auto','height':'auto'});
-    	$('.headerWrap').css({'position':'relative','z-index':'0'});
+    	$('.header').css({'position':'relative','z-index':'0'});
     	$('.navicon').find('i').attr( "class", "fal fa-bars");
-    	$('button.navicon').attr( "aria-label", "Open Mobile Menu");
+    	$('.navicon').attr( "aria-label", "Open Mobile Menu");
     });
 
 //Slideshow
