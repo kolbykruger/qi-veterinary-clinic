@@ -3,19 +3,6 @@ $('a:not(.force), button:not(.force), input[type="submit"]:not(.force)').click(f
     return false
 })
 
-//Scroll to Top
-$('body').append('<a href="" onclick="event.preventDefault()" class="event_track" data-cat="Extra" data-label="Back To Top"><i aria-hidden="true" class="far fa-arrow-alt-circle-up scrollToTop" title="Scroll Up"></i></a>');
-$(window).scroll(function(){
-	if ($(this).scrollTop() > 100) {
-		$('.scrollToTop').fadeIn(100);
-	} else {
-		$('.scrollToTop').fadeOut(100);
-	}
-});
-$('.scrollToTop').click(function(){
-	$('html, body').animate({scrollTop : 0},800);
-});
-
 //Responsive iFrame
 $('iframe[src*="youtube"]').wrap('<div class="responsiveIframe"/>');
 
