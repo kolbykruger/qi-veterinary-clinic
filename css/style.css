@@ -8,7 +8,7 @@ html{font-size: 62.5%; -webkit-text-size-adjust: 100%; -webkit-font-smoothing: a
 html[lang="en"]{opacity:0;}
 html.wf-active,
 html.wf-inactive{opacity: 1; transition: opacity .4s ease-out;}
-body{font-family: Arial, sans-serif; color: #222; background: #fff; font-size: 1.6rem;}
+body{font-family: Arial, sans-serif; color: #232021; background: #fff; font-size: 1.6rem;}
 body {max-width: 1200px; margin: 1em auto; border-radius: 0.5em; box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);}
 section {margin: 3em auto;}
 section:first-of-type {margin-top: 0;}
@@ -22,20 +22,20 @@ hr::before { content: '.....'; letter-spacing: 0.6em; }
 main {min-height: 80vh;}
 main h1 {font-size: calc(2.0rem + (40 - 20) * ((100vw - 400px) / (1200 - 400))); font-weight: 600;}
 main h2 {font-size: calc(1.6rem + (32 - 16) * ((100vw - 400px) / (1200 - 400))); font-weight: 600;}
-main h3 {font-size: calc(1.4rem + (24 - 14) * ((100vw - 400px) / (1200 - 400))); font-weight: 500;}
+main h3 {font-size: calc(1.4rem + (24 - 14) * ((100vw - 400px) / (1200 - 400))); font-weight: 600;}
 main h1,
 main h2,
 main h3 {margin: 0 0 0.25em; line-height: 1;  display: block; width: 100%;}
 main p {font-size: 1.6rem; margin-bottom: 1em; font-weight: 400; line-height: 1.6;}
 main p:last-of-type {margin: 0;}
-main a {color: #ef4538;}
+main a {color: #7b8638;}
 main ul {list-style: outside disc;}
 main ol {}
 main ul,
 main ol {font-size: 1.6rem; padding: 0 0 1.5em 2em; font-weight: 400; line-height: 1.6; overflow: hidden;}
 main li {position: relative;}
-main blockquote{width: 80%; max-width:700px; margin: 3em auto; font-style: italic; color: #555; padding: 1.5em 1.5em 1.5em 5em; border-left: 0.5em solid #ef4538; line-height: 1.6; position: relative; background: #eeeeee;}
-main blockquote::before{font-family:Arial; content:"\201C"; color: #ef4538; font-size:4em; position: absolute; left: 10px; top:-10px;}
+main blockquote{width: 80%; max-width:700px; margin: 3em auto; font-style: italic; color: #555; padding: 1.5em 1.5em 1.5em 5em; border-left: 0.5em solid #7b8638; line-height: 1.6; position: relative; background: #eeeeee;}
+main blockquote::before{font-family:Arial; content:"\201C"; color: #7b8638; font-size:4em; position: absolute; left: 10px; top:-10px;}
 main img{max-width: 100%; height: auto; vertical-align: bottom; border: none;}
 
     @media (max-width: 768px) {
@@ -51,10 +51,10 @@ main img{max-width: 100%; height: auto; vertical-align: bottom; border: none;}
 .buttons.center {justify-content: center;}
 .buttons.right {justify-content: flex-end;}
 .button + .button {margin: 0 0 0 1em;}
-.button {display: inline-flex; align-items: center; margin: 0; padding: 1em 1.5em; background: #ef4538; color: #fff; border-radius: 0.25em; line-height: 1; transition: 150ms ease; text-decoration: none; user-select: none;}
+.button {display: inline-flex; align-items: center; margin: 0; padding: 1em 1.5em; background: #7b8638; color: #fff; border-bottom: 2px solid rgba(0,0,0,0.25); border-radius: 0.25em; line-height: 1; transition: 150ms ease; text-decoration: none; user-select: none;}
 .button i + span,
 .button span + i {margin-left: 0.5em;}
-.button:hover, .button:focus { background: #f0574b; box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);}
+.button:hover, .button:focus {box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);}
 .button:active { box-shadow: 0 2px 4px 0 rgba(50,50,93,.1); transform: translateY(1px);}
 button.button, input[type="submit"].button {cursor: pointer; font-family: inherit; font-size: inherit; line-height: inherit; color: #fff; border: none; outline: none; -webkit-appearance: none; -moz-appearance: none;}
 
@@ -76,7 +76,7 @@ button.button, input[type="submit"].button {cursor: pointer; font-family: inheri
 .header {width: 100%;}
 .header .container {position: relative; padding: 1em; }
 .header .group {display: flex; flex-flow: row wrap; justify-content: space-between; align-items: center; }
-.header .logo {width: 50%; max-width: 240px; }
+.header .logo {width: 50%; max-width: 200px;}
 .header .logo a {display: block; }
 .header .logo img {width: 100%; }
 .header .mobile-icons {display: none;}
@@ -100,10 +100,10 @@ button.button, input[type="submit"].button {cursor: pointer; font-family: inheri
 .nav {text-align: center; margin-right: 1em; user-select: none; z-index: 10;}
 .nav ul {overflow: unset; margin: 0; padding: 0; line-height: 1; list-style: none;}
 .nav li {position: relative; display: block;}
-.nav a {display: block; color: #000; font-size: 1.6rem; text-decoration: none; transition: 250ms ease;}
+.nav a {display: block; color: #232021; font-size: 1.6rem; text-decoration: none; transition: 250ms ease;}
 .nav a:hover,
-.nav a:focus {color: #ef4538;}
-.nav li.open > a {color: #ef4538;}
+.nav a:focus {color: #7b8638;}
+.nav li.open > a {color: #7b8638;}
 .nav a i {font-size: 1.2rem; cursor: pointer; margin: 0 0 0 6px;}
 .nav ul.top {display: flex; flex-flow: row wrap; align-items: center;}
 .nav ul.top > li {margin: 0 0 0 2em;}
@@ -113,6 +113,8 @@ button.button, input[type="submit"].button {cursor: pointer; font-family: inheri
 .nav ul.drop a:hover,
 .nav ul.drop a:focus {background: #f8f8f8;}
 .nav li.open ul.drop {top: calc(100% + .5em); opacity: 1; z-index: 10;}
+
+.nav li a.button {color: #fff;}
 
     @media (max-width: 900px) {
     .nav {display: none;}
@@ -141,7 +143,7 @@ button.button, input[type="submit"].button {cursor: pointer; font-family: inheri
 .mobile-nav .mobile-search .autocomplete-items a {padding: 1em;}
 .mobile-nav .mobile-closer{width: auto; height: auto; display:block; border: none; border: 1px solid rgb(229, 229, 229); margin:10px auto 0; padding: 10px 20px; color: #666; background: #fff; font-size: 15px; z-index: 1000000;}
 
-.mobile-nav ul *:focus {outline: none; background: #ef4538 !important;}
+.mobile-nav ul *:focus {outline: none; background: #7b8638 !important;}
 
 /*Searchbox*/
 .searchbox{user-select: none; border: 1px solid #e4e4e4; border-radius: 3px; width: 100%; overflow: hidden; max-width: 300px; position: relative; margin: 0 0 10px;}
@@ -204,7 +206,7 @@ button.button, input[type="submit"].button {cursor: pointer; font-family: inheri
 .content_columns .main{padding: 0 10px 0 0; max-width: 800px;}
 .content_columns .sidebar {padding: 0 0 0 10px; width: 300px;}
 .content_columns .sidebar .section{margin: 0 0 30px 0; background: #fff; overflow: hidden; border-radius: 3px; font-size: 1.6rem;}
-.content_columns .sidebar .section .heading{display: block; color:#fff; text-transform: uppercase; font-size: 1.5rem; padding:10px; background: #ef4538;}
+.content_columns .sidebar .section .heading{display: block; color:#fff; text-transform: uppercase; font-size: 1.5rem; padding:10px; background: #7b8638;}
 .content_columns .sidebar .section .group{padding:15px; font-size: 1.4rem}
 
 .columns {}
@@ -213,7 +215,7 @@ button.button, input[type="submit"].button {cursor: pointer; font-family: inheri
 .columns .main {padding: 0 10px 0 0; max-width: 800px;}
 .columns .sidebar {padding: 0 0 0 10px; width: 300px;}
 .columns .sidebar .section {margin: 0 0 30px 0; background: #fff; overflow: hidden; border-radius: 3px; font-size: 1.6rem;}
-.columns .sidebar .section .heading {display: block; color:#fff; text-transform: uppercase; font-size: 1.5rem; padding:10px; background: #ef4538;}
+.columns .sidebar .section .heading {display: block; color:#fff; text-transform: uppercase; font-size: 1.5rem; padding:10px; background: #7b8638;}
 .columns .sidebar .section .group {padding:15px; font-size: 1.4rem}
 
 .columns.blog-columns {margin: 0 auto;}
@@ -228,7 +230,11 @@ button.button, input[type="submit"].button {cursor: pointer; font-family: inheri
 
 /*Introduction*/
 .introduction {}
-.introduction .container {max-width: 768px; padding: 1em; text-align: center;}
+.introduction .container {max-width: 968px; padding: 1em;}
+.introduction .group {align-items: center;}
+.introduction hr {text-align: left;}
+.introduction .loc {max-width: 300px; width: 100%; border-radius: 0.5em; overflow: hidden;}
+.introduction .details {width: calc(100% - 300px); padding: 2em;}
 
 /* Banner */
 .banner {overflow: hidden;}
@@ -324,8 +330,10 @@ button.button, input[type="submit"].button {cursor: pointer; font-family: inheri
     }
 
 /*Instafeed*/
-.instagram_widget{margin: 3em auto; width: 100%; max-width: 1200px;}
-.instagram_widget .heading{width: 100%; margin:0 0 10px 0;}
+.instagram_widget{margin: 0 auto; background: #7b8638; padding: 4em 2em;}
+.instagram_widget .container {}
+.instagram_widget .heading{width: 100%; text-align: center; color: #fff;}
+.instagram_widget .eapps-instagram-feed {margin-top: 2em;}
     @media (max-width: 768px) {
     .instagram_widget{margin: 80px auto 0;}
     }
@@ -336,7 +344,7 @@ button.button, input[type="submit"].button {cursor: pointer; font-family: inheri
 #blog_list .blog_layout .main{padding: 0 10px 0 0; max-width: 800px;}
 #blog_list .blog_layout .sidebar {padding: 0 0 0 10px; width: 300px;}
 #blog_list .blog_layout .sidebar .section{margin: 0 0 30px 0; background: #fff; overflow: hidden; border-radius: 3px; font-size: 1.6rem;}
-#blog_list .blog_layout .sidebar .section .heading{display: block; color:#fff; text-transform: uppercase; font-size: 1.5rem; padding:10px; background: #ef4538;}
+#blog_list .blog_layout .sidebar .section .heading{display: block; color:#fff; text-transform: uppercase; font-size: 1.5rem; padding:10px; background: #7b8638;}
 #blog_list .blog_layout .sidebar .section .group{padding:15px; font-size: 1.4rem}
 #blog_list .blog_layout .blog_bar{display:none}
 #blog_list .post_cards{display:none}
@@ -383,17 +391,17 @@ button.button, input[type="submit"].button {cursor: pointer; font-family: inheri
 .pagination li a.active{font-weight: 600; border-bottom: #f00 3px solid; padding: 0 1px;}
 
 /* Blog: Post List Widget */
-.post_list_widget{margin: 3em auto; overflow: hidden;}
+.post_list_widget{margin: 1em auto; overflow: hidden;}
 .post_list_widget .container {}
-.post_list_widget h2{width: 100%; margin: 0 10px 10px;}
-.post_list_widget a{text-decoration: none; display:block; color:inherit;}
-.post_list_widget .item{margin:0 10px 20px 10px; background: #fff; border-radius:3px; width: calc(33.333% - 20px);  transition: all .2s ease-in-out;}
+.post_list_widget h2{width: 100%; text-align: center;}
+.post_list_widget .item a{text-decoration: none; display:block; color:inherit;}
+.post_list_widget .item{margin: 1em; text-align: center; background: #fff; border-radius: 0.5em; width: calc(33.333% - 2em); border-radius: 0.5em; box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08); transition: all .2s ease-in-out; overflow: hidden;}
 .post_list_widget .item .cover{margin: 0 auto; overflow:hidden;}
 .post_list_widget .item .cover img{width:100%; transition: all 0.3s cubic-bezier(.25,.8,.25,1);}
 .post_list_widget .item .cover img:hover{transform: scale(1.08);}
 .post_list_widget .item .cover .caption{display: none;}
-.post_list_widget .item .info{padding:0 15px;}
-.post_list_widget .item .title{font-size: 1.8rem; padding: 15px 0 0;}
+.post_list_widget .item .info{padding: 1em;}
+.post_list_widget .item .title{font-size: 2rem; padding: 0.5em 0 0;}
 .post_list_widget .item .title a{text-decoration:none;}
 .post_list_widget .item .title a:hover{text-decoration:underline;}
 .post_list_widget .item .post_meta{margin: 5px 0; font-size: 1.0rem; color: #4e4e4e; display: flex; flex-flow: row wrap; text-transform: uppercase;}
@@ -401,8 +409,11 @@ button.button, input[type="submit"].button {cursor: pointer; font-family: inheri
 .post_list_widget .item .post_meta i{color: #ababab; margin: 0 4px 0 0; font-size: 1.2rem;}
 .post_list_widget .item .post_meta .tags a{color: #4e4e4e; text-decoration: none; display: inline-block; margin: 0 4px 0 0; text-transform: uppercase;}
 .post_list_widget .item .post_meta .tags a:hover{text-decoration: underline;}
-.post_list_widget .item .summary{padding: 15px 0; color: rgba(0,0,0,.6); font-size: 1.3rem; border-top: #eee 1px solid; line-height: 1.6; margin: 15px 0 0;}
+.post_list_widget .item .summary{color: rgba(0,0,0,.6); font-size: 1.3rem; line-height: 1.6; margin: 1em 0 0;}
 .post_list_widget .item .more{font-size:12px;}
+.post_list_widget .item .category {text-transform: uppercase; font-weight: 600; opacity: 0.75; font-size: 1.5rem;}
+
+
     @media (max-width: 768px) {
         .post_list_widget .item{width: calc(50% - 20px);}
     }
@@ -553,15 +564,15 @@ button.button, input[type="submit"].button {cursor: pointer; font-family: inheri
     }
 
 /* Footer */
-.footer {background: #fff;}
-.footer .container {overflow: hidden; padding: 0; font-size: 1.2rem; text-align: center; color: rgba(0, 0, 0, .84);}
-.footer a {color: rgba(0, 0, 0, .84);}
+.footer {background: #4d5022; border-radius: 0 0 0.5em 0.5em;}
+.footer .container {overflow: hidden; padding: 0; text-align: center; color: #fff;}
+.footer a {color: #fff; text-decoration: none;}
 .footer .social {margin: 20px auto; font-size: 2rem; display: flex; justify-content: center;}
-.footer .social a {margin: 0 5px; position: relative; background: rgba(0, 0, 0, 1); display: flex; align-items: center; justify-content: center; padding: 5px; color: #fff; text-decoration: none; width: 2em;}
+.footer .social a {margin: 0 5px; position: relative; background: #fff; display: flex; align-items: center; justify-content: center; padding: 5px; color: #4d5022; border-radius: 50%; text-decoration: none; width: 2em;}
 .footer .social a:after {content: ""; display: block; padding-bottom: 100%;}
 .footer .social a:hover {background: rgba(0, 0, 0, .6);}
 .footer .address {margin: 0 auto 0.5em;}
 .footer .contact {margin: 0 auto 0.5em;}
 .footer .copyright {margin: 0 auto 0.5em;}
-.footer .ewd {margin: 0 auto 0.5em; width: 200px;}
+.footer .ewd {margin: 1em auto 2em; width: 200px;}
 .footer .ewd img {width: 100%;}
