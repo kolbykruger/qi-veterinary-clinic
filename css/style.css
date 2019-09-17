@@ -74,8 +74,8 @@ button.button, input[type="submit"].button {cursor: pointer; font-family: inheri
 
 /*Header*/
 .header {width: 100%;}
-.header .container {position: relative; padding: 1em; }
-.header .group {display: flex; flex-flow: row wrap; justify-content: space-between; align-items: center; }
+.header .container {position: relative; padding: 1em 1em;}
+.header .group {display: flex; flex-flow: row wrap; justify-content: space-between; align-items: center;}
 .header .logo {width: 50%; max-width: 200px;}
 .header .logo a {display: block; }
 .header .logo img {width: 100%; }
@@ -87,6 +87,12 @@ button.button, input[type="submit"].button {cursor: pointer; font-family: inheri
 .header .search button {position: absolute; background: none; height: 100%; cursor: pointer; outline: 0; border: 0; color: #222; top: 50%; right: 0; padding: 0 10px; line-height: 100%; font-size: 1.2rem; transform: translateY(-50%); }
 .header .search input {-webkit-appearance: none; -moz-appearance: none; appearance: none; border-radius: 2px; border: 0; background: #fbfbfb; outline: 0; width: 100%; font-size: 1.4rem; padding: 8px 30px 8px 8px; color: #4e4e4e; font-style: italic; }
 
+.header .navigation-group {display: flex; flex-flow: column nowrap; justify-content: space-between;}
+
+.header .utility-nav {display: flex; align-items: center; justify-content: flex-end;}
+.header .utility-nav .item {margin-right: 1em;}
+.header .utility-nav .item a {color: inherit; font-size: 1.4rem; text-decoration: none;}
+
     @media (max-width: 900px) {
     .header {height: 72px; display: flex; flex-flow: row nowrap; justify-content: space-between; align-items: center; margin: 0 auto;}
     .header .container {padding: 0.5em;}
@@ -97,14 +103,14 @@ button.button, input[type="submit"].button {cursor: pointer; font-family: inheri
     }
 
 /* Navigation */
-.nav {text-align: center; margin-right: 1em; user-select: none; z-index: 10;}
+.nav {text-align: center; margin-right: 1em; margin-top: 1.5em; user-select: none; z-index: 10;}
 .nav ul {overflow: unset; margin: 0; padding: 0; line-height: 1; list-style: none;}
 .nav li {position: relative; display: block;}
-.nav a {display: block; color: #232021; font-size: 1.6rem; text-decoration: none; transition: 250ms ease;}
+.nav a {display: block; color: #232021; font-size: 1.8rem; text-decoration: none; transition: 250ms ease;}
 .nav a:hover,
 .nav a:focus {color: #7b8638;}
 .nav li.open > a {color: #7b8638;}
-.nav a i {font-size: 1.2rem; cursor: pointer; margin: 0 0 0 6px;}
+.nav a i {font-size: 1.2rem; cursor: pointer; margin: 0 0 0 6px; display: none;}
 .nav ul.top {display: flex; flex-flow: row wrap; align-items: center;}
 .nav ul.top > li {margin: 0 0 0 2em;}
 .nav ul.top li:last-child ul {left: auto; right: 0; text-align: right;}
