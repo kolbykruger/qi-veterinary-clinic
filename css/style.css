@@ -58,6 +58,8 @@ main img{max-width: 100%; height: auto; vertical-align: bottom; border: none;}
 .button:active { box-shadow: 0 2px 4px 0 rgba(50,50,93,.1); transform: translateY(1px);}
 button.button, input[type="submit"].button {cursor: pointer; font-family: inherit; font-size: inherit; line-height: inherit; color: #fff; border: none; outline: none; -webkit-appearance: none; -moz-appearance: none;}
 
+.button.white {background: #fff; color: #7b8638;}
+
     @media (max-width: 768px) {
     .button,
     .button + .button {margin: 0 1em 1em 0;}
@@ -76,7 +78,7 @@ button.button, input[type="submit"].button {cursor: pointer; font-family: inheri
 .header {width: 100%;}
 .header .container {position: relative; padding: 1em 1em;}
 .header .group {display: flex; flex-flow: row wrap; justify-content: space-between; align-items: center;}
-.header .logo {width: 50%; max-width: 200px;}
+.header .logo {width: 50%; max-width: 250px;}
 .header .logo a {display: block; }
 .header .logo img {width: 100%; }
 .header .mobile-icons {display: none;}
@@ -90,8 +92,8 @@ button.button, input[type="submit"].button {cursor: pointer; font-family: inheri
 .header .navigation-group {display: flex; flex-flow: column nowrap; justify-content: space-between;}
 
 .header .utility-nav {display: flex; align-items: center; justify-content: flex-end;}
-.header .utility-nav .item {margin-right: 1em;}
-.header .utility-nav .item a {color: inherit; font-size: 1.4rem; text-decoration: none;}
+.header .utility-nav .item {margin: 0 1em;}
+.header .utility-nav .item a {font-size: 2rem; color: #c0c833; text-decoration: none;}
 
     @media (max-width: 900px) {
     .header {height: 72px; display: flex; flex-flow: row nowrap; justify-content: space-between; align-items: center; margin: 0 auto;}
@@ -103,22 +105,22 @@ button.button, input[type="submit"].button {cursor: pointer; font-family: inheri
     }
 
 /* Navigation */
-.nav {text-align: center; margin-right: 1em; margin-top: 1.5em; user-select: none; z-index: 10;}
+.nav {text-align: center; background: #221f20; user-select: none; z-index: 10;}
 .nav ul {overflow: unset; margin: 0; padding: 0; line-height: 1; list-style: none;}
 .nav li {position: relative; display: block;}
-.nav a {display: block; color: #232021; font-size: 1.8rem; text-decoration: none; transition: 250ms ease;}
+.nav a {display: block; color: #fff; font-size: 1.8rem; padding: 1em 0.5em; text-decoration: none; transition: 250ms ease;}
 .nav a:hover,
 .nav a:focus {color: #7b8638;}
 .nav li.open > a {color: #7b8638;}
-.nav a i {font-size: 1.2rem; cursor: pointer; margin: 0 0 0 6px; display: none;}
-.nav ul.top {display: flex; flex-flow: row wrap; align-items: center;}
-.nav ul.top > li {margin: 0 0 0 2em;}
+.nav a i {font-size: 1.2rem; cursor: pointer; margin: 0 0 0 6px;}
+.nav ul.top {display: flex; flex-flow: row wrap; align-items: center; justify-content: flex-end;}
+.nav ul.top > li {margin: 0 1.5em;}
 .nav ul.top li:last-child ul {left: auto; right: 0; text-align: right;}
 .nav ul.drop {border-radius: 3px; padding: 0; left: 0; opacity: 0; position: absolute; top: -9999px; background: #fff; white-space: nowrap; min-width: 200px; box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08); text-align: left; transition: opacity .35s; overflow: hidden;}
-.nav ul.drop a {padding: 10px; margin: 0; font-size: 1.3rem;}
+.nav ul.drop a {padding: 10px; margin: 0; font-size: 1.3rem; color: #232021;}
 .nav ul.drop a:hover,
 .nav ul.drop a:focus {background: #f8f8f8;}
-.nav li.open ul.drop {top: calc(100% + .5em); opacity: 1; z-index: 10;}
+.nav li.open ul.drop {top: calc(100%); opacity: 1; z-index: 10;}
 
 .nav li a.button {color: #fff;}
 
@@ -265,6 +267,9 @@ button.button, input[type="submit"].button {cursor: pointer; font-family: inheri
 .bits .item {width: calc(20% - 2em); margin: 1em; padding: 2em; border-radius: 0.5em; text-align: center; box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08); text-decoration: none; color: inherit;}
 .bits .item .icon {font-size: 4rem; margin-bottom: 0.5em;}
 .bits .item h3 {}
+
+/* Services */
+.services {background: #7b8638; padding: 3em 0; margin: 3em auto !important;}
 
 /*Features*/
 .features {overflow: hidden; margin: 30px -10px;}
